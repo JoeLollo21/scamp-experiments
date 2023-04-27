@@ -28,3 +28,8 @@ melody = [ # This is really just a C chromatic scale
   (76, 0.25), # E, quarter note
   (60, 1.0) # C, whole note
 ]
+
+for pitch_duration in melody:
+  guitar.play_note(pitch, 0.7, duration)
+ 
+s.stop_transcribing().to_score().show()
