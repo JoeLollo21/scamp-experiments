@@ -1,5 +1,9 @@
 from scamp import *
 
+# Here's the basic test:
+test_run.play(show_lilypond=True)
+
+# Ok, now let's spice it up a bit...
 s = Session(tempo=50)
 guitar = s.new_part("Guitar")
 s.start_transcribing()
@@ -30,6 +34,6 @@ melody = [ # This is really just a C chromatic scale
 ]
 
 for pitch_duration in melody:
-  guitar.play_note(pitch, 0.7, duration)
+  guitar.play()
  
 s.stop_transcribing().to_score().show()
