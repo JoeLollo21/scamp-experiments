@@ -8,6 +8,16 @@ s = Session(tempo=50)
 guitar = s.new_part("Guitar")
 s.start_transcribing()
 
+melody = [
+  (60, 1.0),
+  (72, 1.0)
+]
+
+for pitch_duration in melody:
+  guitar.play()
+ 
+s.stop_transcribing().to_score().show()
+
 melody = [ # This is really just a C chromatic scale
   (60, 0.25), # C, quarter note
   (64, 0.25), # E, quarter note
